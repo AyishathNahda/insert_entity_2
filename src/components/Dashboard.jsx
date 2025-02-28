@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import MovieCard from './MovieCard';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Dashboard.css'; // Optional: Import CSS for styling
 
 const Dashboard = () => {
@@ -17,7 +18,7 @@ const Dashboard = () => {
       genre: 'Science Fiction',
       releaseYear: 2010,
       synopsis: 'A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.',
-      posterUrl: 'https://image.tmdb.org/t/p/original/xymM5aW6MDcH5AR9I3CamSegJd6.jpgg',
+      posterUrl: 'https://image.tmdb.org/t/p/original/xymM5aW6MDcH5AR9I3CamSegJd6.jpg',
     },
     {
       id: 2,
@@ -35,6 +36,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <header className="dashboard-header">
         <h1>Movie Collection</h1>
+        <Link to='/add-movie' className='add-movie-button'>Add Movie</Link>
       </header>
       <div className="movie-list">
         {movies.map((movie) => (
